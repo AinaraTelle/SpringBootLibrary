@@ -93,12 +93,12 @@ jobs:
           cp -r target/site/* docs/site/
           cp -r target/doxygen/* docs/doxygen/
 
-      - name: Commit and push docs
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add -f docs
-          git commit -m "Update Maven site [CI skip]" || echo "No changes to commit"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+      # - name: Commit and push docs
+        # run: |
+         #  git config --global user.name "github-actions"
+        #   git config --global user.email "github-actions@github.com"
+        #   git add -f docs
+        #   git commit -m "Update Maven site [CI skip]" || echo "No changes to commit"
+        #   git push
+       #  env:
+        #  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
